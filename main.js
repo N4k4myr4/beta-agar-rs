@@ -34,7 +34,7 @@ window.draw = () => {
 let observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
         mutation.addedNodes.forEach((node) => {
-            if (/agario\.core\.js/i.test(node.src)) {
+            if (/beta.agar.rs\.core\.js/i.test(node.src)) {
                 observer.disconnect();
                 node.parentNode.removeChild(node);
                 let request = new XMLHttpRequest();
